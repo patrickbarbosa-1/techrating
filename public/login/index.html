@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">-->
+    <script src="https://kit.fontawesome.com/3260dd539e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="form-box">
+        <h1 id="title">Sing Up</h1>
+        <form>
+            <div class="imput-group">
+                <div class="imput-field" id="nameField">
+                    <i class="fa-solid fa-user"></i>
+                    <input type='text' placeholder="Name">
+                </div>
+                <div class="imput-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type='email' placeholder="Email">
+                </div>
+                <div class="imput-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type='password' placeholder="Password">
+                </div>
+                <p>Esqueceu senha <a href="#">Clique aqui</a></p>
+            </div>
+            <div class="btn-field">
+                <button type="button" id="signupBtn">Sing up</button>
+                <button type="button" id="signinBtn"class="disable">Sing in</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+
+let signupBtn = document.getElementById("singupBtn");
+let signinBtn = document.getElementById("singinBtn");
+let nameField = document.getElementById("nameField");
+let title = document.getElementById("title");
+
+signinBtn.onclick = function(){
+    nameField.style.maxHeight = "0";
+    title.innerHTML="Sing In";
+    signupBtn.classList.add("disable");
+    signupBtn.classList.remove("disable");
+}
+signupBtn.onclick = function(){
+    nameField.style.maxHeight = "60";
+    title.innerHTML="Sing Up";
+    signupBtn.classList.remove("disable");
+    signupBtn.classList.add("disable");
+}
+
+</script>
+</body>
+</html>
