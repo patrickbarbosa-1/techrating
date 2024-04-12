@@ -25,33 +25,33 @@
                     <i class="fa-solid fa-lock"></i>
                     <input type='password' placeholder="Password">
                 </div>
-                <p>Esqueceu senha <a href="#">Clique aqui</a></p>
+                <p>Esqueceu sua senha?<a href="#"> clique aqui</a></p><br>
             </div>
             <div class="btn-field">
-                <button type="button" id="signupBtn">Sing up</button>
-                <button type="button" id="signinBtn"class="disable">Sing in</button>
+                <button type="button" id="signupBtn" href="{{url('/')}}">Sing up</button>
+                <button type="button" id="signinBtn" class=disable href="{{url('/')}}">Sing in</button>
             </div>
         </form>
     </div>
 </div>
 <script>
 
-let signupBtn = document.getElementById("singupBtn");
-let signinBtn = document.getElementById("singinBtn");
+let signupBtn = document.getElementById("signupBtn");
+let signinBtn = document.getElementById("signinBtn");
 let nameField = document.getElementById("nameField");
 let title = document.getElementById("title");
 
 signinBtn.onclick = function(){
     nameField.style.maxHeight = "0";
-    title.innerHTML="Sing In";
+    title.innerHTML="Sign In";
     signupBtn.classList.add("disable");
-    signupBtn.classList.remove("disable");
+    signinBtn.classList.remove("disable");
 }
 signupBtn.onclick = function(){
-    nameField.style.maxHeight = "60";
-    title.innerHTML="Sing Up";
+    nameField.style.maxHeight = "60px";
+    title.innerHTML="Sign Up";
     signupBtn.classList.remove("disable");
-    signupBtn.classList.add("disable");
+    signinBtn.classList.add("disable");
 }
 
 </script>
