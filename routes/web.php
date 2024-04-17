@@ -27,6 +27,11 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+//Login
+Route::get('/signin',[App\Http\Controllers\LoginController::class,'index'])->name('login.index');
+Route::post('/signin',[App\Http\Controllers\LoginController::class,'store'])->name('login.store');
+Route::get('/signinout',[App\Http\Controllers\LoginController::class,'destroy'])->name('login.destroy');
+
 //--------------------------------------- CRUD CATEGORIA -----------------------------------
 
 // CRUD

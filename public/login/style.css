@@ -31,6 +31,7 @@
     margin-bottom: 60px;
     color: #3c00a0;
     position: relative;
+    font-weight: 900;
 }
 
 .form-box h1::after{

@@ -3,14 +3,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
-    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <script src="https://kit.fontawesome.com/3260dd539e.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
 <div class="container">
     <div class="form-box">
-        <h1 id="title">Sing Up</h1>
+        <h1 id="title">Login</h1>
         <form>
             <div class="imput-group">
                 <div class="imput-field" id="nameField">
@@ -28,8 +28,8 @@
                 <p>Esqueceu sua senha?<a href="#"> clique aqui</a></p><br>
             </div>
             <div class="btn-field">
-                <button type="button" id="signupBtn" href="{{url('/')}}">Sing up</button>
-                <button type="button" id="signinBtn" class=disable href="{{url('/')}}">Sing in</button>
+                <button type="button" id="signupBtn" href="{{url('/signin')}}">Sing up</button>
+                <button type="button" id="signinBtn" class=disable href="{{url('/signin')}}">Sing in</button>
             </div>
         </form>
     </div>
