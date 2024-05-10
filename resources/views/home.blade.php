@@ -14,7 +14,17 @@
                         </div>
                     @endif
 
-                    {{ __('Você estar logado!') }}
+                    @can('is_admin')
+                    <div class="alert alert-success" role="alert">
+                        Você é um administrador !
+                    </div>
+                    @else
+                    <div class="alert alert-success" role="alert">
+                        Você é um usuário normal !
+                    </div>
+                    @endcan
+
+                    {{ __('You are logged in!') }}
                 </div>
             </div>
         </div>

@@ -14,7 +14,7 @@
 									</div>
 								</header>
 								<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
-								<p>{{ $value->conteudo}}</p>
+								<p>{!! $value->conteudo !!}</p>
 								<footer>
 									<ul class="stats">
 										<li><a href="#">{{ $value->categoria->nome}}</a></li>
