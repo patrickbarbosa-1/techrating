@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Postagem;
 use App\Models\categoria;
 use App\Models\User;
-
+use App\Models\Comentario;
+use App\Models\Curtida;
 
 
 
@@ -46,9 +47,34 @@ class BlogController extends Controller
 
                 public function postagemComentario(Request $request, $id){
 
-                    $postagem = Postagem::find($id);
+
+
+                    $comentario = new Comentario;
+                    $comentario->conteudo = $request->conteudo;
+                    $comentario->user_id = auth()->user()->id;
+                    $comentario->postagem_id = $id;
+                    $comentario->save();
+
+
+                return redirect()->route('blog.postagem' , $id);
 
                 }
 
+         public function curtida($id){
 
+            $curtidaExistente = Curtida::where('user_id',auth()->user()->id)->where('postagem_id', $id)->exists();
+
+            //dd($curtidaExistente);
+
+            if(!$curtidaExistente){
+            $curtida = new Curtida;
+            $curtida->user_id = auth()->user()->id;
+            $curtida->postagem_id = $id;
+            $curtida->save();
+         }
+
+           //return redirect()->route('blog.postagem', $id);
+
+            return back()->withInput();
+        }
         }

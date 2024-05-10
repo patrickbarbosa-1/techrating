@@ -25,45 +25,45 @@ Route::get('/', [BlogController::class, 'index'])->name('blog.index');
 
 Auth::routes();
 
+Route::middleware(['auth'])->group(function () {
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//Login
-Route::get('/signin',[App\Http\Controllers\LoginController::class,'index'])->name('login.index');
-Route::post('/signin',[App\Http\Controllers\LoginController::class,'store'])->name('login.store');
-Route::get('/signinout',[App\Http\Controllers\LoginController::class,'destroy'])->name('login.destroy');
+
 
 //--------------------------------------- CRUD CATEGORIA -----------------------------------
 
 // CRUD
 
 //LISTAR
-Route::get('/categoria',[CategoriaController::class, 'index'])->name('categoria.index');
+Route::get('/categoria',[CategoriaController::class, 'index'])->middleware('can:is_admin')->name('categoria.index');
 
 
 // CREATE GET / STORE POST
 //create
-Route::get('/categoria/create', [CategoriaController::class, 'create'])->name('categoria.create');
+Route::get('/categoria/create', [CategoriaController::class, 'create'])->middleware('can:is_admin')->name('categoria.create');
 
 
 
 //STORES
-Route::POST('/categoria/create', [CategoriaController::class, 'store'])->name('categoria.store');
+Route::POST('/categoria/create', [CategoriaController::class, 'store'])->middleware('can:is_admin')->name('categoria.store');
 
 
 //SHOW - GET
-Route::get('/categoria/{id}', [CategoriaController::class, 'show'])->name('categoria.show');
+Route::get('/categoria/{id}', [CategoriaController::class, 'show'])->middleware('can:is_admin')->name('categoria.show');
 
 
 // EDIT GET / UPDATE PUT
 //edit
-Route::get('/categoria/{id}/edit', [CategoriaController::class, 'edit'])->name('categoria.edit');
+Route::get('/categoria/{id}/edit', [CategoriaController::class, 'edit'])->middleware('can:is_admin')->name('categoria.edit');
 
 //update
-Route::put('/categoria/{id}/edit', [CategoriaController::class, 'update'])->name('categoria.update');
+Route::put('/categoria/{id}/edit', [CategoriaController::class, 'update'])->middleware('can:is_admin')->name('categoria.update');
 
 
 // DESTROY DELETE
-Route::delete('/categoria/{id}', [CategoriaController::class, 'destroy'])->name('categoria.destroy');
+Route::delete('/categoria/{id}', [CategoriaController::class, 'destroy'])->middleware('can:is_admin')->name('categoria.destroy');
 
 
 
@@ -78,34 +78,35 @@ Route::delete('/categoria/{id}', [CategoriaController::class, 'destroy'])->name(
 // CRUD
 
 //LISTAR
-Route::get('/postagem',[PostagemController::class, 'index'])->name('postagem.index');
+Route::get('/postagem',[PostagemController::class, 'index'])->middleware('can:is_admin')->name('postagem.index');
 
 
 // CREATE GET / STORE POST
 //create
-Route::get('/postagem/create', [PostagemController::class, 'create'])->name('postagem.create');
+Route::get('/postagem/create', [PostagemController::class, 'create'])->middleware('can:is_admin')->name('postagem.create');
 
 
 
 //STORES
-Route::POST('/postagem/create', [PostagemController::class, 'store'])->name('postagem.store');
+Route::POST('/postagem/create', [PostagemController::class, 'store'])->middleware('can:is_admin')->name('postagem.store');
 
 
 //SHOW - GET
-Route::get('/postagem/{id}', [PostagemController::class, 'show'])->name('postagem.show');
+Route::get('/postagem/{id}', [PostagemController::class, 'show'])->middleware('can:is_admin')->name('postagem.show');
 
 
 // EDIT GET / UPDATE PUT
 //edit
-Route::get('/postagem/{id}/edit', [PostagemController::class, 'edit'])->name('postagem.edit');
+Route::get('/postagem/{id}/edit', [PostagemController::class, 'edit'])->middleware('can:is_admin')->name('postagem.edit');
 
 //update
-Route::put('/postagem/{id}/edit', [PostagemController::class, 'update'])->name('postagem.update');
+Route::put('/postagem/{id}/edit', [PostagemController::class, 'update'])->middleware('can:is_admin')->name('postagem.update');
 
 
 // DESTROY DELETE
-Route::delete('/postagem/{id}', [PostagemController::class, 'destroy'])->name('postagem.destroy');
+Route::delete('/postagem/{id}', [PostagemController::class, 'destroy'])->middleware('can:is_admin')->name('postagem.destroy');
 
+});
 
 // --------------------------------BLOG----------------------------------------------
 
@@ -119,5 +120,7 @@ Route::get('/blog/autor/{id}', [BlogController::class, 'autorPostagem'])->name('
 
 Route::get('/blog/postagem/{id}', [BlogController::class, 'postagem'])->name('blog.postagem');
 
-Route::get('/blog/postagemComentario/{id}', [BlogController::class, 'postagemComentario'])->name('blog.postagemComentario');
+Route::post('blog/postagemComentario/{id}', [BlogController::class, 'postagemComentario'])->name('blog.postagemComentario')->middleware('auth');
+
+Route::get('blog/curtida/{id}', [BlogController::class, 'curtida'])->name('blog.curtida')->middleware('auth');
 
