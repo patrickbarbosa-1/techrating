@@ -6,10 +6,10 @@
 -->
 <html>
 	<head>
-		<title>Tech Rating</title>
+		<title>BLOG DO MIKE OLIVEIRA</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="{{url('assets/css/main.css')}}" />
+		<link rel="stylesheet" href="{{url('assets/css/main.css') }}" />
 	</head>
 	<body class="single is-preload">
 
@@ -18,18 +18,18 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="index.html">Tech Rating</a></h1>
+						<h1><a href="index.html">TECH RATING</a></h1>
 						<nav class="links">
 							<ul>
-								<li><a href="#">Home</a></li>
-                                <li><a href="#">Categorias</a></li>
-
+								<li><a href="{{ url('/') }}">Início</a></li>
+								<li><a href="{{ url('/blog/categoria') }}">Categoria</a></li>
+								<li><a href="{{ url('/blog/autor') }}">Autor</a></li>
 							</ul>
 						</nav>
 						<nav class="main">
 							<ul>
 								<li class="search">
-									<a class="fa-search" href="#search">Pesquise</a>
+									<a class="fa-search" href="#search">Search</a>
 									<form id="search" method="get" action="#">
 										<input type="text" name="query" placeholder="Search" />
 									</form>
@@ -55,15 +55,15 @@
 							<section>
 								<ul class="links">
 									<li>
-										<a href="{{url('/login')}}">
+										<a href="{{ url('/login')}}">
 											<h3>Login</h3>
-											<p>Entrar</p>
+											<p>Entrar no sistema</p>
 										</a>
 									</li>
 									<li>
-										<a href="{{url('/register')}}">
-											<h3>Register</h3>
-											<p>Registre-se</p>
+										<a href="{{ url('/register')}}">
+											<h3>Registrar</h3>
+											<p>Faça o seu registro</p>
 										</a>
 									</li>
 									<!--
@@ -79,14 +79,15 @@
 											<p>Porta lectus amet ultricies</p>
 										</a>
 									</li>
-								</ul>
-                            -->
+
+                                -->
+                                </ul>
 							</section>
 
 						<!-- Actions -->
 							<section>
 								<ul class="actions stacked">
-									<li><a href="{{ url('/login') }}" class="button large fit">Log In</a></li>
+									<li><a href="{{ url('/login')}}" class="button large fit">Log In</a></li>
 								</ul>
 							</section>
 
@@ -95,8 +96,8 @@
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Post -->
                         @yield('content')
+						<!-- Post -->
 
 					</div>
 
