@@ -19,7 +19,11 @@ class UserSeeder extends Seeder
             'email' => 'oliveira.mike2015@gmail.com',
             'password' => Hash::make('14563258Mk@'),
             'role' => 'admin' ,
+<<<<<<< Updated upstream
             'created_at' => now(),
+=======
+            'createde_at' => now(),
+>>>>>>> Stashed changes
             'updated_at' => now(),
         ]);
 
@@ -30,6 +34,10 @@ class UserSeeder extends Seeder
             'role' => 'normal' ,
             'created_at' => now(),
             'updated_at' => now(),
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
         ]);
 
     }
