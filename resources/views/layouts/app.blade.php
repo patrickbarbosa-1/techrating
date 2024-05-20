@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>BLOG DO MIKE OLIVEIRA</title>
+		<title>Tech Rating</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{{url('assets/css/main.css') }}" />
