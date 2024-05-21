@@ -14,17 +14,24 @@ class PostagemSeeder extends Seeder
     public function run(): void
     {
         DB::table('postagens')->insert([
-            'titulo' => 'Bolo de chocolate',
-            'conteudo'=> 'receita do bolo de chocolate',
+            'titulo' => 'Iphone 15 PRO MAX',
+            'conteudo'=> 'Um celular muito sofisticado',
             'user_id' => 1,
             'categoria_id'=> 1,
         ]);
 
         DB::table('postagens')->insert([
-            'titulo' => 'Guerra da Ucrânia',
-            'conteudo'=> 'O acontecimento mais triste de 2022',
+            'titulo' => 'Smart TV Nano Cristal 65" LG 4K HDR 65NANO77SRA',
+            'conteudo'=> 'Televisão de útilma geração',
             'user_id' => 1,
             'categoria_id'=> 2,
+        ]);
+
+        DB::table('postagens')->insert([
+            'titulo' => 'Apple Macbook Pro M3 Pro 14,2" 18GB SSD 1TB Mac OS',
+            'conteudo'=> 'TNotebook de útilma geração',
+            'user_id' => 1,
+            'categoria_id'=> 3,
         ]);
     }
 }
