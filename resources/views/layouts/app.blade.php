@@ -92,9 +92,36 @@
 							</section>
 
 					</section>
+<!-- Carrosel
+                    <section>
+                        <div id="carouselExample" class="carousel slide">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="https://imgs.casasbahia.com.br/55065636/2g.jpg" class="d-block w-10" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="..." class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="https://imgs.casasbahia.com.br/55065636/3g.jpg" class="d-block w-10" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                    </section>-->
 
-				<!-- Main -->
-					<div id="main">
+                    <!-- Main -->
+
+
+                <div id="main">
+
 
                         @yield('content')
 						<!-- Post -->
