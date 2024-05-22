@@ -32,18 +32,19 @@ class BlogController extends Controller
     public function autor(){
         $autores = User::orderBy('name', 'ASC')->get();
         return view('blog.autor', ['autores' => $autores]);
-        }
+    }
 
 
-        public function autorPostagem($id){
-            $postagens = Postagem::where('user_id', $id)->orderBy('id', 'DESC')->get();
-            return view('welcome', ['postagens' => $postagens]);
-            }
+    public function autorPostagem($id){
+        $postagens = Postagem::where('user_id', $id)->orderBy('id', 'DESC')->get();
+        return view('welcome', ['postagens' => $postagens]);
+    }
 
-            public function postagem($id){
-                $postagem = Postagem::find($id);
-                return view('blog.postagem', ['postagem' => $postagem]);
-                }
+    public function postagem($id){
+        $postagem = Postagem::find($id);
+        //dd($postagem->curtidas->count());
+        return view('blog.postagem', ['postagem' => $postagem]);
+    }
 
                 public function postagemComentario(Request $request, $id){
 

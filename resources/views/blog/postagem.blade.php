@@ -10,7 +10,7 @@
 								<footer>
 									<ul class="stats">
 										<li><a href="#">{{ $postagem->categoria->nome }}</a></li>
-										<li><a href="#" class="icon solid fa-heart">{{ $postagem->curtidas>count() }}</a></li>
+										<li><a href="#" class="icon solid fa-heart">{{ $postagem->curtidas->count() }}</a></li>
 										<li><a href="{{ url('/blog/postagem/' . $postagem->id) }}" class="icon solid fa-comment">{{ $postagem->comentarios->count() }} COMENTÁRIOS</a></li>
 
 
