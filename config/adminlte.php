@@ -303,13 +303,13 @@ return [
         [
             'text'         => 'Categoria',
             'url'         => 'categoria',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-file',
         ],
 
         [
             'text'         => 'Postagem',
             'url'         => 'postagem',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-file',
         ],
 
         // Sidebar items:
@@ -319,20 +319,20 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-        [
+       /* [
             'text'        => 'pages',
             'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fa-file',
             'label'       => 4,
             'label_color' => 'success',
-        ],
+        ],*/
         ['header' => 'account_settings'],
         [
             'text' => 'profile',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
         ],
-        [
+       /*[
             'text' => 'change_password',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
@@ -390,7 +390,7 @@ return [
             'text'       => 'information',
             'icon_color' => 'cyan',
             'url'        => '#',
-        ],
+        ],*/
     ],
 
     /*
