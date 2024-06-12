@@ -29,7 +29,7 @@
 						<nav class="main">
 							<ul>
 								<li class="search">
-									<a class="fa-search" href="#search">Search</a>
+									<a class="fa-search" href="#search">Buscar</a>
 									<form id="search" method="get" action="#">
 										<input type="text" name="query" placeholder="Search" />
 									</form>
