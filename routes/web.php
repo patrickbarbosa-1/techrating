@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\PostagemController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PerfilController;
 
 /*
 |--------------------------------------------------------------------------
@@ -124,3 +125,4 @@ Route::post('blog/postagemComentario/{id}', [BlogController::class, 'postagemCom
 
 Route::get('blog/curtida/{id}', [BlogController::class, 'curtida'])->name('blog.curtida')->middleware('auth');
 
+Route::get('/perfil', [PerfilController::class, 'index'])->name('perfil.index')->middleware('auth');

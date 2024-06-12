@@ -12,7 +12,7 @@
 									</div>
 									<div class="meta">
 										<time class="published" datetime="2015-11-01">{{ \Carbon\Carbon::parse($value->created_at)->format('d/m/y h:i:s')}}</time>
-										<a href="#" class="author"><span class="name">{{ $value->user->name }}</span><img src="images/avatar.jpg" alt="" /></a>
+										<a href="{{ url('blog/autor/' . $value->user->id )}}" class="author"><span class="name">{{ $value->user->name }}</span><img src="images/avatar.jpg" alt="" /></a>
 									</div>
 								</header>
 								<p>{!! $value->conteudo !!}</p>
@@ -20,10 +20,10 @@
 								<footer>
 									<ul class="stats">
 										<li><a href="#">{{ $value->categoria->nome }}</a></li>
-                                        <li><a href="#" class="icon solid fa-heart">{{-- $value->curtidas->count() --}} curtidas </a></li>
+                                       <!--<li><a href="{{ url('/blog/curtida/' . $value->id) }}" class="icon solid fa-heart">{{-- $value->curtidas->count() --}} curtidas </a></li>-->
 
                                         @auth
-                                        <li><a href="{{ url('/blog/curtida/' . $value->id) }}" class="icon solid fa-heart">curtir </a></li>
+                                        <li><a href="{{ url('/blog/curtida/' . $value->id) }}" class="icon solid fa-heart">curtir {{ $value->curtidas->count() }} </a></li>
                                          @endauth
 
                                         <li><a href="{{ url('/blog/postagem/' . $value->id) }}" class="icon solid fa-comment">{{-- $value->comentarios->count() --}} comentários</a></li>
