@@ -29,7 +29,7 @@ class PostagemSeeder extends Seeder
 
         DB::table('postagens')->insert([
             'titulo' => 'Apple Macbook Pro M3 Pro 14,2" 18GB SSD 1TB Mac OS',
-            'conteudo'=> 'TNotebook de útilma geração',
+            'conteudo'=> 'Notebook de útilma geração',
             'user_id' => 1,
             'categoria_id'=> 3,
         ]);
