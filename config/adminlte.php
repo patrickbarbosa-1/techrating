@@ -299,6 +299,7 @@ return [
             'text'         => 'Principal',
             'url'         => 'home',
             'icon' => 'fas fa-fw fa-user',
+            'label_color' => '#605ca8',
         ],
         [
             'text'         => 'Categoria',
