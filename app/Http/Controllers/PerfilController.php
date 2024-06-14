@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Models\Perfil;
 
 class PerfilController extends Controller
@@ -15,6 +14,30 @@ class PerfilController extends Controller
     {
         $user = auth()->user();
     return view ('perfil', ['user' => $user]);
+    }
+
+    public function perfilUpdate(Request $request, string $id)
+    {
+        //dd($request->all());
+
+        $messages = [
+            'nick.required' => 'O campo :attribute é obrigatório!',
+            'foto.required' => 'O campo :attribute é obrigatório!',
+        ];
+
+        $validated = $request->validate([
+            'nick' => 'required|min:5',
+            'foto' => 'required|mimes:jpg,png',
+        ], $messages);
+
+        $foto = $request->file('foto');
+
+        $user = User::find($id);
+        $user->nick = $request->nick;
+        $user->foto = base64_encode (file_get_contents ($foto));
+        $user->save();
+
+        return redirect('perfil')->with('status', 'Perfil atualizado com sucesso!');
     }
 
     /**

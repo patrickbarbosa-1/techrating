@@ -18,7 +18,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="index.html">TECH RATING</a></h1>
+						<h1><a href="{{url('/')}}">TECH RATING</a></h1>
 						<nav class="links">
 							<ul>
 								<li><a href="{{ url('/') }}">Início</a></li>

@@ -14,14 +14,14 @@
                         <form method="POST" action="{{ url('/perfil/' . $user->id . '/edit') }}"
                             enctype="multipart/form-data">
 
-                            <h1 style="font-family: 'Courier New', Courier, monospace; font-weight: 600">Perfil</h1>
+                            <h1 style="font-family: 'Courier New', Courier, monospace; font-weight: 600">Nick</h1>
 
                             @csrf
                             <div class="mb-3">
                                 <div class="form-floating mb-3 mt-3 text-muted">
-                                    <label for="fname">Nome</label>
+                                    <label for="fname">Nick</label>
                                     <input type="text" id="fname" class="form-control" name="nome"
-                                        value="{{ $user->nome }}">
+                                        value="{{ $user->nick }}">
                                 </div>
                             </div>
 
