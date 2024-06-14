@@ -11,7 +11,7 @@
 
                         <img src="data:image/png;base64,{{ $user->foto }}" />
 
-                        <form method="POST" action="{{ url('/perfil/' . $user->id . '/edit') }}"
+                        <form method="POST" action="{{ url('/perfil' . $user->id . '/edit') }}"
                             enctype="multipart/form-data">
 
                             <h1 style="font-family: 'Courier New', Courier, monospace; font-weight: 600">Nick</h1>
