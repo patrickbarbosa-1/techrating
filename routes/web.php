@@ -126,4 +126,5 @@ Route::post('blog/postagemComentario/{id}', [BlogController::class, 'postagemCom
 Route::get('blog/curtida/{id}', [BlogController::class, 'curtida'])->name('blog.curtida')->middleware('auth');
 
 Route::get('/perfil', [PerfilController::class, 'index'])->name('perfil.index')->middleware('auth');
+
 Route::post('/perfil/{id}/edit', [App\Http\Controllers\PerfilController::class, 'perfilUpdate'])->name('perfil.update');

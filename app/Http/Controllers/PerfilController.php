@@ -26,7 +26,7 @@ class PerfilController extends Controller
         ];
 
         $validated = $request->validate([
-            'nick' => 'required|min:5',
+            'nick' => 'required|min:2',
             'foto' => 'required|mimes:jpg,png',
         ], $messages);
 
