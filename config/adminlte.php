@@ -294,6 +294,8 @@ return [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
         ],
+
+
         [
 
             'text'         => 'Principal',
