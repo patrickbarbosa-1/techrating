@@ -1,7 +1,6 @@
 @extends('adminlte::page')
 
 @section('content')
-    ('content')
         <!doctype html>
         <html lang="pt-BR">
 
@@ -38,7 +37,7 @@
 
                         <img src="data:image/png;base64,{{ $user->foto }}" />
 
-                        <form method="POST" action="{{ url('/perfil' . $user->id . '/edit') }}"
+                        <form method="POST" action="{{ url('/perfil/' . $user->id . '/edit') }}"
                             enctype="multipart/form-data">
 
                             <h1 style="font-family: 'Courier New', Courier, monospace; font-weight: 600">Nick</h1>
@@ -47,7 +46,7 @@
                             <div class="mb-3">
                                 <div class="form-floating mb-3 mt-3 text-muted">
                                     <label for="fname">Nick</label>
-                                    <input type="text" id="fname" class="form-control" name="nome"
+                                    <input type="text" id="fname" class="form-control" name="nick"
                                         value="{{ $user->nick }}">
                                 </div>
                             </div>
