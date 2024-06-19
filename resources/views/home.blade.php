@@ -1,29 +1,6 @@
 @extends('adminlte::page')
 
 @section('content')
-            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-                <script type="text/javascript">
-                google.charts.load('current', {'packages':['corechart']});
-                google.charts.setOnLoadCallback(drawChart);
-
-                function drawChart() {
-
-                    var data = google.visualization.arrayToDataTable([
-                    ['Post', 'quantidades'],
-                    @foreach ($postagens as $postagem)
-                        ['{{ $postagem->nome}}','{{$postagem->quantidade}}']
-                    @endforeach
-                    ]);
-
-                    var options = {
-                    title: 'Postagens'
-                    };
-
-                    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-                    chart.draw(data, options);
-                }
-                </script>
 <!--Card-->
 <div class="row">
     <div class="col-lg-3 col-6">
@@ -72,11 +49,9 @@
         <div class="icon">
             <i class="ion ion-pie-graph"></i>
         </div>
-            <a href="#" class="small-box-footer">Mais informações<i class="fas fa-arrow-circle-right"></i></a>
+            <a href="#" class="small-box-footer">Mais informações <i class="fas fa-arrow-circle-right"></i></a>
         </div>
     </div>
-<!--Gráfico-->
-<div id="piechart" style="width: 450px; height: 250px;"></div>
 </div>
 
 <!--Dashboard-->
