@@ -29,7 +29,17 @@ class HomeController extends Controller
         $categoria_count = Categoria::count();
         $postagem_count = Postagem::count();
         $user_count = User::count();
+        $categoria = Categoria::get();
+        $postagens = Postagem::get();
 
-        return view('home', ['categoria_count' => $categoria_count, 'postagem_count' => $postagem_count, 'user_count' => $user_count  ]);
+        //dd($postagens);
+
+        return view('home', [
+            'categoria_count'   => $categoria_count,
+            'postagem_count'    => $postagem_count,
+            'user_count'        => $user_count,
+            'categoria'        => $categoria,
+            'postagens'          => $postagens
+        ]);
     }
 }
