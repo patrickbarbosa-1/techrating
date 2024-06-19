@@ -170,7 +170,7 @@ return [
     'classes_auth_card' => 'bg-gradient-dark',
     'classes_auth_header' => '',
     'classes_auth_body' => 'bg-gradient-dark',
-    'classes_auth_footer' => 'text-center',
+    'classes_auth_footer' => '',
     'classes_auth_icon' => 'fa-fw text-light',
     'classes_auth_btn' => 'btn-flat btn-light',
     /*
@@ -185,15 +185,15 @@ return [
     |
     */
 
-    'classes_body' => '',
-    'classes_brand' => '',
-    'classes_brand_text' => '',
-    'classes_content_wrapper' => '',
-    'classes_content_header' => '',
-    'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
-    'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_body' => 'bg-dark',
+    'classes_brand' => 'bg-dark',
+    'classes_brand_text' => 'bg-dark',
+    'classes_content_wrapper' => 'bg-dark',
+    'classes_content_header' => 'bg-dark',
+    'classes_content' => 'bg-dark',
+    'classes_sidebar' => 'sidebar-dark-warning elevation-4',
+    'classes_sidebar_nav' => 'bg-dark',
+    'classes_topnav' => 'navbar-dark navbar-dark',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -300,13 +300,14 @@ return [
 
             'text'         => 'Principal',
             'url'         => 'home',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-home',
             'label_color' => '#605ca8',
         ],
         [
             'text'         => 'Categoria',
             'url'         => 'categoria',
-            'icon' => 'fas fa-fw fa-file',
+            'icon' => 'fas fa-fw fa-category',
+            'label_color' => '#605ca8',
         ],
 
         [
