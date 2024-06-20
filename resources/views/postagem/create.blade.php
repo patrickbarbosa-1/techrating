@@ -53,8 +53,9 @@
 
                                </textarea>
 
-
-                            <input type="submit" class="form-control" value="ENVIAR">
+                               <label for="fname">Imagem:</label><br>
+                               <input type="file" id="imagem" name="imagem">
+                               <input type="submit" class="form-control" value="Enviar">
 
                         </form>
                         <script>

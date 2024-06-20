@@ -40,7 +40,7 @@ class CategoriaController extends Controller
       ];
 
       $validated = $request->validate([
-        'nome' => 'required|min:5',
+        'nome' => 'required|min:3',
 
       ], $messages);
 

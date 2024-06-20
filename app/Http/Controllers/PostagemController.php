@@ -50,14 +50,15 @@ class PostagemController extends Controller
         'titulo' => 'required|min:5',
         'conteudo' => 'required|min:5',
 
+
       ], $messages);
 
-$postagem = new Postagem;
-$postagem->titulo = $request->titulo;
-$postagem->conteudo = $request->conteudo;
-$postagem->user_id = $user_id;
-$postagem->categoria_id = $request->categoria_id;
-$postagem->save();
+    $postagem = new Postagem;
+    $postagem->titulo = $request->titulo;
+    $postagem->conteudo = $request->conteudo;
+    $postagem->user_id = $user_id;
+    $postagem->categoria_id = $request->categoria_id;
+    $postagem->save();
 
 return redirect('postagem')->with('status', 'Postagem salva com sucesso!');
 
@@ -104,8 +105,8 @@ return redirect('postagem')->with('status', 'Postagem salva com sucesso!');
           ];
 
           $validated = $request->validate([
-            'titulo' => 'required|min:5',
-            'conteudo' => 'required|min:5',
+            'titulo' => 'required|min:3',
+            'conteudo' => 'required|min:3',
 
           ], $messages);
 

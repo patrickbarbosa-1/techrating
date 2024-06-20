@@ -17,7 +17,7 @@
             </div>
             </div>
             <div class="col-lg-3 col-6">
-                <div class="small-box bg-dark">
+                <div class="small-box bg-warning">
                     <div class="inner">
                         <h3>{{ $postagem_count }}</h3>
                             <p>Postagens</p>
@@ -41,7 +41,7 @@
             </div>
         </div>
             <div class="col-lg-3 col-6">
-        <div class="small-box bg-warning">
+        <div class="small-box bg-warning text-white">
         <div class="inner">
             <h3>10</h3>
                 <p>Visitas</p>
@@ -49,7 +49,7 @@
         <div class="icon">
             <i class="ion ion-pie-graph"></i>
         </div>
-            <a href="#" class="small-box-footer">Mais informações <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="#" class="small-box-footer ">Mais informações <i class="fas fa-arrow-circle-right"></i></a>
         </div>
     </div>
 </div>

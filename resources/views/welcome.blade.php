@@ -12,7 +12,7 @@
 									</div>
 									<div class="meta">
 										<time class="published" datetime="2015-11-01">{{ \Carbon\Carbon::parse($value->created_at)->format('d/m/y h:i:s')}}</time>
-										<a href="{{ url('blog/autor/' . $value->user->id )}}" class="author"><span class="name">{{ $value->user->name }}</span><img src="https://static.wikia.nocookie.net/animeverso/images/f/f4/Urso_pardissimo.png/revision/latest?cb=20230803215418&path-prefix=pt-br" alt="" /></a>
+										<a href="{{ url('blog/autor/' . $value->user->id )}}" class="author"><span class="name">{{ $value->user->name }}</span><img src="{{ url('images/luffy.jpg')}}" alt="" /></a>
 									</div>
 								</header>
 								<p>{!! $value->conteudo !!}</p>
