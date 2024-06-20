@@ -187,15 +187,15 @@ return [
 
     'classes_body' => 'bg-dark',
     'classes_brand' => 'bg-dark',
-    'classes_brand_text' => 'bg-dark',
+    'classes_brand_text' => 'text-white',
     'classes_content_wrapper' => 'bg-dark',
     'classes_content_header' => 'bg-dark',
     'classes_content' => 'bg-dark',
-    'classes_sidebar' => 'sidebar-dark-warning elevation-4',
+    'classes_sidebar' => 'sidebar-dark-warning text-dark elevation-4',
     'classes_sidebar_nav' => 'bg-dark',
     'classes_topnav' => 'navbar-dark navbar-dark',
     'classes_topnav_nav' => 'navbar-expand',
-    'classes_topnav_container' => 'container',
+    'classes_topnav_container' => 'container text-dark',
 
     /*
     |--------------------------------------------------------------------------
@@ -306,8 +306,8 @@ return [
         [
             'text'         => 'Categoria',
             'url'         => 'categoria',
-            'icon' => 'fas fa-fw fa-category',
-            'label_color' => '#605ca8',
+            'icon' => 'fas fa-fw fa-file',
+
         ],
 
         [

@@ -2,10 +2,10 @@
 
 @section('content')
 <!--Card-->
-<div class="row">
+<div class="row mt-3">
     <div class="col-lg-3 col-6">
 
-        <div class="small-box bg-info">
+        <div class="small-box bg-warning">
             <div class="inner">
                 <h3>{{ $categoria_count }}</h3>
                     <p>Categorias</p>
@@ -17,7 +17,7 @@
             </div>
             </div>
             <div class="col-lg-3 col-6">
-                <div class="small-box bg-success">
+                <div class="small-box bg-dark">
                     <div class="inner">
                         <h3>{{ $postagem_count }}</h3>
                             <p>Postagens</p>
@@ -41,7 +41,7 @@
             </div>
         </div>
             <div class="col-lg-3 col-6">
-        <div class="small-box bg-danger">
+        <div class="small-box bg-warning">
         <div class="inner">
             <h3>10</h3>
                 <p>Visitas</p>
@@ -58,22 +58,22 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+            <div class="card text-dark">
+                <div class="card-header ">{{ __('Dashboard') }}</div>
                 <div class="card-body">
 
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
+                        <div class="alert alert-warning" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
 
                     @can('is_admin')
-                    <div class="alert alert-success" role="alert">
+                    <div class="alert alert-warning" role="alert">
                         Você é um administrador !
                     </div>
                     @else
-                    <div class="alert alert-success" role="alert">
+                    <div class="alert alert-warning" role="alert">
                         Você é um usuário normal !
                     </div>
                     @endcan

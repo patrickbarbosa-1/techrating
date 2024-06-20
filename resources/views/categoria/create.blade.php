@@ -1,13 +1,13 @@
 @extends('adminlte::page')
 
 @section('content')
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
+    <div class="container text-dark">
+        <div class="row justify-content-center  text-dark">
+            <div class="col-md-8  text-dark">
+                <div class="card mt-5 text-dark ">
                     <div class="card-header">Categoria - CRIAR</div>
 
-                    <div class="card-body">
+                    <div class="card-body text-dark">
 
 
 

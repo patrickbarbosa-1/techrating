@@ -3,16 +3,16 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Categoria - EDITAR</div>
+            <div class="col-md-8 text-dark">
+                <div class="card mt-5 text-dark">
+                    <div class="card-header text-dark">Categoria - EDITAR</div>
 
-                    <div class="card-body">
+                    <div class="card-body text-black">
 
 
 
                                                 @if ($errors->any())
-                            <div class="alert alert-danger">
+                            <div class="alert alert-danger ">
                                 <ul>
                                     @foreach ($errors->all() as $error)
                                         <li>{{ $error }}</li>

@@ -2,12 +2,12 @@
 
 @section('content')
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Categorias</div>
+        <div class="row justify-content-center text-dark">
+            <div class="col-md-8 text-dark">
+                <div class="card mt-5 text-dark">
+                    <div class="card-header text-dark">Categorias</div>
 
-                    <div class="card-body">
+                    <div class="card-body text-dark">
 
 
                                                     @if (session('status'))
