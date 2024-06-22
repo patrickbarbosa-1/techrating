@@ -295,9 +295,7 @@ return [
             'text' => 'search',
         ],
 
-
         [
-
             'text'         => 'Principal',
             'url'         => 'home',
             'icon' => 'fas fa-fw fa-home',
@@ -335,6 +333,12 @@ return [
             'text' => 'profile',
             'url'  => 'perfil',
             'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+
+            'text'         => 'Home',
+            'url'         => '/',
+            'icon' => 'fas fa-fw fa-home',
         ],
        /*[
             'text' => 'change_password',

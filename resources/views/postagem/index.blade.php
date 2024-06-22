@@ -37,7 +37,7 @@
                                 @foreach ($postagens as $value)
                                     <tr>
                                     <th scope="row">{{ $value->id }}</th>
-                                    <td>{{ $value->categoria->nome }}</td>
+                                    {{-- <td>{{ $value->categoria->nome }}</td> --}}
                                     <td>{{ $value->titulo }}</td>
                                     <td><a class="btn btn-info" href="{{ url('/postagem/' . $value->id) }}" type="button" >Visualizar</a></td>
                                     <td><a class="btn btn-warning" href="{{ url('/postagem/' . $value->id . '/edit') }}" type="button" >Editar</a></td>

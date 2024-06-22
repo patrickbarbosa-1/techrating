@@ -8,12 +8,12 @@
 <script type="text/javascript" src='{{ url('/richtexteditor/plugins/all_plugins.js') }}'></script>
     <div class="container">
 
-        <div class="row justify-content-center">
-            <div class="col-12">
-                <div class="card mt-5">
+        <div class="row justify-content-center text-dark">
+            <div class="col-12 text-dark">
+                <div class="card mt-5 text-dark">
                     <div class="card-header">Postagem - CRIAR</div>
 
-                    <div class="card-body">
+                    <div class="card-body text-dark">
 
 
 
@@ -52,9 +52,8 @@
 
 
                                </textarea>
+<br>
 
-                               <label for="fname">Imagem:</label><br>
-                               <input type="file" id="imagem" name="imagem">
                                <input type="submit" class="form-control" value="Enviar">
 
                         </form>

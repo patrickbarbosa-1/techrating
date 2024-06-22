@@ -11,7 +11,7 @@
         <div class="row justify-content-center text-dark">
             <div class="col-12 text-dark">
                 <div class="card mt-5 text-dark">
-                    <div class="card-header">Postagem - EDITAR</div>
+                    <div class="card-header text-dark">Postagem - EDITAR</div>
 
                     <div class="card-body text-dark">
 
